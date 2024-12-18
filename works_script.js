@@ -42,3 +42,20 @@ document.addEventListener('DOMContentLoaded', () => {
     script.onload = () => createUnityInstance(window.createUnityLoader);
     document.body.appendChild(script);
 });
+
+script.onload = () => {
+    if (typeof createUnityInstance === 'function') {
+        createUnityInstance(canvas, config, (progress) => {
+            progressBarFull.style.width = `${100 * progress}%`;
+        }).then((unityInstance) => {
+            loadingBar.style.display = 'none';
+        }).catch((message) => {
+            showBanner(message, '#ff0000');
+        });
+    } else {
+        showBanner('Unity loader failed to initialize.', '#ff0000');
+    }
+};
+
+document.querySelector("#unity-webgl-legend").style.display = "none";
+
