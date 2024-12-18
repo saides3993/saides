@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Saidenberg</title>
+  <link rel="stylesheet" href="works_styles.css">
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#music">music</a></li>  
+        <li><a href="#contact">contact</a></li>
+        <li><a href="#resume">resume</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas" style="width: 960px; height: 600px; background: #231F20"></canvas>
+        <div id="unity-loading-bar">
+            <div id="unity-logo"></div>
+            <div id="unity-progress-bar-empty">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+        </div>
+        <div id="unity-warning"> </div>
+        <div id="unity-footer">
+            <div id="unity-webgl-legend">
+                WebGL is not supported on this browser.
+                <br>
+                Please use a modern browser like Chrome, Firefox, or Edge.
+            </div>
+        </div>
+    </div>
+    
+    <script src="unity-loader.js"></script>
+
+  <script src="works_script.js"></script>
+</body>
+</html>
