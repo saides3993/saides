@@ -136,24 +136,6 @@ section p {
     align-items: center;
 }
 
-#unity-logo {
-    width: 154px;
-    height: 130px;
-    background: url('unity-logo.png') no-repeat center;
-}
-
-#unity-progress-bar-empty {
-    width: 141px;
-    height: 18px;
-    margin: 20px 0;
-    background: url('progress-bar-empty.png') no-repeat center;
-}
-
-#unity-progress-bar-full {
-    width: 0%;
-    height: 18px;
-    background: url('progress-bar-full.png') no-repeat center;
-}
 
 #unity-warning { 
     position: absolute;
@@ -176,4 +158,23 @@ section p {
 #unity-webgl-legend {
     color: white;
     font-size: 14px;
+}
+
+#unity-logo {
+    width: 154px;
+    height: 130px;
+    background: url('./unity-logo.png') no-repeat center;
+}
+
+#unity-progress-bar-empty {
+    width: 141px;
+    height: 18px;
+    margin: 20px 0;
+    background: url('./progress-bar-empty.png') no-repeat center;
+}
+
+#unity-progress-bar-full {
+    width: 0%;
+    height: 18px;
+    background: url('./progress-bar-full.png') no-repeat center;
 }
