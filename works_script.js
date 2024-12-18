@@ -23,39 +23,30 @@ document.addEventListener('DOMContentLoaded', () => {
         warningBanner.textContent = msg;
     };
 
-    const createUnityInstance = (script) => {
-        const canvas = document.querySelector("#unity-canvas");
-        
-        return script.createUnityInstance(canvas, config, (progress) => {
-            progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-            loadingBar.style.display = "none";
-            return unityInstance;
-        }).catch((message) => {
-            showBanner(message, '#ff0000');
-        });
-    };
-
     // Load the Unity loader script dynamically
     const script = document.createElement('script');
     script.src = loaderUrl;
-    script.onload = () => createUnityInstance(window.createUnityLoader);
+    script.onload = () => {
+        if (typeof createUnityInstance === 'function') {
+            createUnityInstance(canvas, config, (progress) => {
+                progressBarFull.style.width = `${100 * progress}%`;
+            }).then((unityInstance) => {
+                loadingBar.style.display = "none";
+            }).catch((message) => {
+                showBanner(message, "#ff0000");
+            });
+        } else {
+            showBanner("Unity loader failed to initialize.", "#ff0000");
+        }
+    };
+    script.onerror = () => {
+        showBanner("Failed to load Unity loader script.", "#ff0000");
+    };
     document.body.appendChild(script);
-});
 
-script.onload = () => {
-    if (typeof createUnityInstance === 'function') {
-        createUnityInstance(canvas, config, (progress) => {
-            progressBarFull.style.width = `${100 * progress}%`;
-        }).then((unityInstance) => {
-            loadingBar.style.display = 'none';
-        }).catch((message) => {
-            showBanner(message, '#ff0000');
-        });
-    } else {
-        showBanner('Unity loader failed to initialize.', '#ff0000');
+    // Hide the WebGL legend (optional)
+    const webglLegend = document.querySelector("#unity-webgl-legend");
+    if (webglLegend) {
+        webglLegend.style.display = "none";
     }
-};
-
-document.querySelector("#unity-webgl-legend").style.display = "none";
-
+});
