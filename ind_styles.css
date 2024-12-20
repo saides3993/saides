@@ -47,6 +47,7 @@ section {
 section:nth-child(1) { background-color: var(--hlight-clr); }
 section:nth-child(2) { background-color: var(--accent-clor) }
 section:nth-child(3) { background-color: var(--page-color); }
+section:nth-child(4) { background-color: var(--accent2-clr); }
 
 /* Body styles */
 body {
