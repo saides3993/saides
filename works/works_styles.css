@@ -83,6 +83,11 @@ header {
     color: var(--light-text-clr);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--hlight-clr);
 }
 
 

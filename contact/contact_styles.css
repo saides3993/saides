@@ -1,0 +1,160 @@
+:root {
+    --back-clr: #0D160B;  
+    --back2-clr: #eeeeee;
+    --hlight-clr: #176220;
+    --accent-clor: #479aa2;
+    --page-color: #3f5491;
+    --hlight2-clr: #DE7C7C;
+    --accent2-clr: #A40E4C;
+    --light-text-clr: #d5d5d5;
+    --dark-text-clr: #0D160B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--back2-clr);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: var(--back-clr);
+    color: var(--hlight2-clr);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 25px;
+}
+
+.menu a {
+    color: var(--light-text-clr);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--hlight-clr);
+}
+
+.contact-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--back2-clr);
+    min-height: calc(100vh - 58px);
+}
+
+.contact-card {
+    background-color: var(--back-clr);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-header h1 {
+    color: var(--hlight2-clr);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+    color: var(--light-text-clr);
+    font-size: 1.1rem;
+}
+
+.contact-info {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-item i {
+    color: var(--hlight2-clr);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-item a {
+    color: var(--light-text-clr);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--hlight2-clr);
+}
+
+.contact-item .label {
+    color: var(--hlight2-clr);
+    font-weight: bold;
+    margin-right: 1rem;
+    min-width: 100px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--light-text-clr);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--hlight2-clr);
+}
