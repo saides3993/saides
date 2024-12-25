@@ -8,6 +8,7 @@
     --accent2-clr: #A40E4C;
     --light-text-clr: #d5d5d5;
     --dark-text-clr: #0D160B;
+    --item-background: #0a2c2f;
 }
 
 * {
@@ -35,7 +36,7 @@ header {
     background: var(--back-clr);
     color: var(--hlight2-clr);
     font-family: 'Times New Roman', Times, serif;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     width: 100%;
 }
@@ -70,7 +71,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background-color: var(--back2-clr);
+    background-color: var(--item-background);
     min-height: calc(100vh - 58px);
 }
 

@@ -3,39 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucas Saidenberg</title>
-  <link rel="stylesheet" href="./works_styles.css">
+  <title>Game Showcase</title>
+  <link rel="stylesheet" href="works_styles.css">
 </head>
 <body>
   <header>
     <nav class="menu">
       <ul>
         <li><a href="/home/index.html">home</a></li>
-        <li><a href="/music/recursion.html">music</a></li>  
+        <li><a href="/music/recursion.html">music</a></li>
         <li><a href="/contact/me.html">contact</a></li>
-        <li><a href="/resume.html">resume</a></li>
+        <li><a href="/resume/bagel.html">resume</a></li>      
       </ul>
     </nav>
   </header>
-    <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" style="width: 960px; height: 600px; background: #231F20"></canvas>
-        <div id="unity-loading-bar">
-            <div id="unity-logo"></div>
-            <div id="unity-progress-bar-empty">
-                <div id="unity-progress-bar-full"></div>
-            </div>
+
+  <div class="sections">
+    <button id="activate-game1">click here to play "skate for your life!"</button>
+    <section>
+      <div id="unity-container-game1" class="unity-desktop">
+        <canvas id="unity-canvas-game1"></canvas>
+        <div id="unity-loading-bar-game1">
+          <div id="unity-logo"></div>
+          <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full-game1"></div>
+          </div>
         </div>
-        <!-- <div id="unity-warning"> </div>
-        <div id="unity-footer">
-            <div id="unity-webgl-legend">
-                WebGL is not supported on this browser.
-                <br>
-                Please use a modern browser like Chrome, Firefox, or Edge.
-            </div>
-        </div> -->
-    </div>
-    
-    <script src="./pi_day_build/pi_day.loader.js"></script>
-  <script src="./works_script.js"></script>
+      </div>
+    </section>
+    <button id="activate-game2">click here to play "pi day"</button>
+    <section>
+      <div id="unity-container-game2" class="unity-desktop">
+        <canvas id="unity-canvas-game2"></canvas>
+        <div id="unity-loading-bar-game2">
+          <div id="unity-logo"></div>
+          <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full-game2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+  <script src="works_script.js"></script>
 </body>
 </html>
