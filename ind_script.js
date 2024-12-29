@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollContainer = document.querySelector(".sections");
 
     // External page navigation
-    const pageMap = {
-        'works': 'works/projects.html',
-        'music': 'music/recursion.html',
-        'contact': 'contact/me.html',
-        'resume': 'resume/bagel.html'
-    };
+    // const pageMap = {
+    //     'works': 'works/projects.html',
+    //     'music': 'music/recursion.html',
+    //     'contact': 'contact/me.html',
+    //     'resume': 'resume/bagel.html'
+    // };
 
     // Menu item clicks
     const menuItems = document.querySelectorAll('.menu a');
@@ -25,16 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
             // Navigate based on section index
             switch(index) {
                 case 0:
-                    window.location.href = "works/projects.html";
+                    window.location.href = "/works/projects.html";
                     break;
                 case 1:
-                    window.location.href = "music/recursion.html";
+                    window.location.href = "/music/recursion.html";
                     break;
                 case 2:
-                    window.location.href = "contact/me.html";
+                    window.location.href = "/contact/me.html";
                     break;
                 case 3:
-                    window.location.href = "resume/bagel.html";
+                    window.location.href = "/resume/bagel.html";
                     break;
             }
         });
