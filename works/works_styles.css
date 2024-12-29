@@ -28,7 +28,7 @@ html, body {
 }
 
 body {
-    background-color: var(--back2-clr);
+    background-color: var(--page-color);
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     display: flex;
