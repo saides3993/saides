@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const game1Controls = {
     canvas: document.querySelector("#unity-canvas-game1"),
     unityInstance: null,
-    loaderUrl: '/saides/skate_for_your_life/skate_for_your_life.loader.js', // Updated path with /saides/
+    loaderUrl: '/saides/works/skate_for_your_life/skate_for_your_life.loader.js', // Updated path with /saides/
     isActive: false,
     loadingBar: document.querySelector("#unity-loading-bar-game1"),
     progressBar: document.querySelector("#unity-progress-bar-full-game1")
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const game2Controls = {
     canvas: document.querySelector("#unity-canvas-game2"),
     unityInstance: null,
-    loaderUrl: '/saides/pi_day_build/pi_day.loader.js', // Updated path with /saides/
+    loaderUrl: '/saides/works/pi_day_build/pi_day.loader.js', // Updated path with /saides/
     isActive: false,
     loadingBar: document.querySelector("#unity-loading-bar-game2"),
     progressBar: document.querySelector("#unity-progress-bar-full-game2")
