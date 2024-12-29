@@ -112,7 +112,19 @@ canvas {
 
 #activate-game1, #activate-game2 {
     height: 100%;
-    background: var(--accent2-clr);
-    width: 100;
-    transition: width 0.3s;
+    width: 40%;
+    background: var(--back-clr);
+    color: var(--light-text-clr); /* Text color */
+    border-radius: 10px; /* Rounded edges */
+    transition: width 0.3s, background-color 0.8s, color 0.3s;
+    font-size: 1.2rem; /* Adjust text size if needed */
+    padding: 10px 20px; /* Adjust padding for better appearance */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Add pointer cursor for better UX */
 }
+
+#activate-game1:hover, #activate-game2:hover {
+    background: var(--hlight-clr); /* Change background on hover */
+    color: var(--dark-text-clr); /* Change text color on hover */
+}
+
