@@ -42,13 +42,44 @@ section {
     scroll-snap-align: start;
     cursor: pointer;
     font-weight: bold;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-section:nth-child(1) { background-color: var(--accent2-clr); }
-section:nth-child(2) { background-color: var(--hlight-clr); }
-section:nth-child(3) { background-color: var(--accent-clor) }
-section:nth-child(4) { background-color: var(--page-color); }
-section:nth-child(5) { background-color: var(--accent2-clr); }
+/* Add a semi-transparent overlay to ensure text readability */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* Make sure text appears above the overlay */
+section * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Background images for each section */
+section:nth-child(1) { 
+    background-image: url('justcause.jpeg');
+}
+section:nth-child(2) { 
+    background-image: url('works_image.png');
+}
+section:nth-child(3) { 
+    background-image: url('contact.png');
+}
+section:nth-child(4) { 
+    background-image: url('resume.png');
+}
+
 
 /* Body styles */
 body {
@@ -92,8 +123,6 @@ header {
     color: var(--hlight-clr);
 }
 
-
-
 /* Section styles */
 /* section {
     padding: 40rem;
@@ -105,9 +134,9 @@ header {
 } */
 
 section h2 {
-    color: var(--dark-text-clr);
+    color: var(--light-text-clr); /* Changed to light text for better readability on images */
 }
 
 section p {
-    color: var(--accent-clr);
+    color: var(--light-text-clr); /* Changed to light text for better readability on images */
 }
