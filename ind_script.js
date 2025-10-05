@@ -25,17 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Navigate based on section index
             switch(index) {
                 case 0:
-                    break;
-                case 1:
                     window.location.href = "/saides/works/projects.html";
                     break;
-                case 2:
+                case 1:
                     window.location.href = "/saides/music/recursion.html";
                     break;
-                case 3:
+                case 2:
                     window.location.href = "/saides/contact/me.html";
                     break;
-                case 4:
+                case 3:
                     window.location.href = "/saides/resume/bagel.html";
                     break;
             }
