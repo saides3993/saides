@@ -68,10 +68,10 @@ section * {
 
 /* Background images for each section */
 section:nth-child(1) { 
-    background-image: url('justcause.jpeg');
+    background-image: url('works_image.png');
 }
 section:nth-child(2) { 
-    background-image: url('works_image.png');
+    background-image: url('justcause.jpeg');
 }
 section:nth-child(3) { 
     background-image: url('contact.png');
@@ -83,7 +83,7 @@ section:nth-child(4) {
 
 /* Body styles */
 body {
-    background-color: var(--back2-clr);
+    /* background-color: var(--back2-clr); */
     font-family: 'Times New Roman', Times, serif, sans-serif;;
     margin: 0;
     padding: 0;
